@@ -2,12 +2,29 @@
 :root{
 
     /* colours  */
+    --colour-white: #FFFFFF;
+    --colour-footer-bg: #1c1917;
+    --colour-header-bg:#FAFAF9;
+    --colour-text-title-section:#9F1239;
+    --colour-text-primary:#1C1917;
+    --colour-text-secondary: #707780;
+    --colour-text-link-hover:#B45309;
+    --colour-text-btn-hover: #9F1239; 
+    --colour-link-active:#B45309;
+    --colour-thir: #e7e5e4;
+    --colour-btn-bg-primary:#9F1239;
+    --colour-btn-bg-secondary: #B45309;
+    --colour-hero-overlay: rgba(28,25,23,0.8);
+    
+
+
+
+
     --colour-primary: #1C1917;	
     --colour-nav-bar-bg: #FAFAF9;
     --colour-section-heading: #9F1239;
     --colour-hover: #B45309;
     --colour-book-bg: #E7E5E4;
-    --colour-white: #FFFFFF;
     --colour-input-bg: #D9E6F3;
     --colour-text-secondary: #6B7280;
     --colour-text-dark: #374151;
@@ -19,31 +36,27 @@
     --colour-success: #16A34A;
     --colour-overlay-white: rgba(255,255,255,0.1);
     --colour-overlay: rgba(0,0,0,0.4);
-    --colour-hero-overlay: rgba(28,25,23,0.7);
 
     /* Fonts  */
+    /* --font-logo:  */
     --font-heading: "Playfair Display", serif;
     --font-body: "Plus Jakarta Sans", sans-serif;
+    /* --font-btn: */
+    /* --font-form-label:  */
+    /* --font-form-input: */
+
+    /* Font size */
+    --font-size-hero: 2.5rem;
+    --font-size-section-title-primary: 3rem;
+    --font-size-section-title-secondary: 1.5rem;
+    --font-size-body-primary: 2rem;
+    --font-size-body-secondary: 1.5rem;
+    --font-size-nav-item: 1.5rem;
+
 
 }
 
 /* global styles*/
-
-.text-center{
-    text-align: center;
-}
-
-.text-red{
-    color: var(--colour-section-heading);
-}
-
-
-
-
-.colour-white{
-    color:#ffffff
-}
-
 
 body{
     margin: 0 auto;
@@ -56,24 +69,65 @@ main{
     flex: 1 0 auto;
 }
 
-/* Home.html */
+.text-title-section{
+    color: var(--colour-text-title-section);
+    font-size: var(--font-size-section-title-primary);
+}
+
+.text-body-primary{
+    font-size: var(--font-size-body-secondary)
+}
+
+/* layout  */
+
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*spacing */
+.w-70{
+    width: 70%;
+}
+
+.mb-5{
+    margin-bottom: 5vh;
+}
+
+/* alignment */
+
+.text-center{
+    text-align: center;
+}
+
+
+
+
+.colour-white{
+    color:#ffffff
+}
 
 /* header */
 
 header{
     width: 100%;
+    background-color: var(--colour-header-bg);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 5px;
+    margin: 2vh 0;
 }
 
 h1{
+    width:100%;
     margin:0;
     flex: 1;
     text-align: center;
     font-family: var(--font-heading);
+    color: var(--colour-text-primary);
+    font-size: var(--font-size-hero);
 }
 
 nav{
@@ -81,7 +135,7 @@ nav{
     width: 100%;
 }
 
-#navigation-elements{
+#nav-items{
     width:100%;
     list-style: none;
     display: flex;
@@ -91,28 +145,33 @@ nav{
     padding: 0;
 }
 
-#navigation-elements  a{
+.nav-item{
     text-decoration: none;
     color: var(--colour-primary);
     font-family: var(--font-heading);
-    font-size: 20px;
+    font-size: var(--font-size-nav-item);
 }
 
-.active{
-    color: var(--colour-hover);
+.nav-item.active{
+    color: var(--colour-link-active);
+    font-weight: 600;
     text-decoration: underline;
 }
 
+
+
 .btn-nav{
-    background-color: var(--colour-section-heading);
-    color: var(--colour-white) !important;
+    background-color: var(--colour-btn-bg-primary);
+    color: var(--colour-white);
     padding: 10px 20px;
     border-radius: 25px;
+    text-decoration:none;
+    font-size: var(--font-size-nav-item);
 }
 
 .btn-nav:hover{
-    color: var(--colour-section-heading) !important;
     background-color: var(--colour-white);
+    color: var(--colour-text-btn-hover);
     border: solid 1px var(--colour-section-heading)
 }
 
@@ -120,80 +179,18 @@ nav{
 
 footer{
     background-color: var(--colour-primary);
-    color: var(--colour-white);
     text-align: center;
 }
 
-/* hero image  */
-
-.image-hero-container{
-    width: 100%;
-    height:50vh;
-    position: relative;
-}
-
-.image-hero-container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.overlay{
-    position: absolute;
-    top:50%;
-    left:50%;
+footer h3{
+    font-size: var(--font-size-section-title-secondary);
     color: var(--colour-white);
-    transform:translate(-50%, -50%);
-    text-align: center;
-    background-color: var(--colour-hero-overlay);
-    width: 50%;
-    padding: 30px;
+    margin: 1vh;
 }
 
-.btn{
-    background-color: var(--colour-hover);
-    color: var(--colour-white);
-    padding: 10px 15px;
-    text-decoration: none;
+footer p{
+    font-size: 1rem;
+    color: var(--colour-text-secondary);
 }
 
 
-/* recipes page  */
-
-#recipes-container{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#cards{
-    width: 100%;
-    flex: 1;
-}
-
-#show-recipe{
-    width:100%;
-    flex:3;
-}
-
-.card-recipe{
-    width:100%;
-    text-align: center;
-    border: solid 1px var(--colour-primary);
-    margin-top: 2vh;
-    background-color: var(--colour-scrollbar-hover);
-}
-
-.card-recipe-active{
-    border:solid 1px var(--colour-hover);
-}
-
-.display-none{
-    display: none;
-}
-ul{
-    list-style: none;
-}
