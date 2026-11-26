@@ -1,0 +1,29 @@
+.dishes{
+    width:100%;
+}
+
+#starters{
+    flex:1;
+}
+
+#mains{
+    flex:1;
+}
+
+.price{
+    color: var(--colour-text-terciary);
+    font-size: var(--font-size-body-primary);
+}
+
+.text-title-dishes{
+    color: var(--colour-text-title-section);
+    font-size: var(--font-size-section-title-secondary);
+}
+
+.text-title-dish{
+    font-size: var(--font-size-section-title-secondary);
+}
+
+#desserts{
+    width:fit-content
+}

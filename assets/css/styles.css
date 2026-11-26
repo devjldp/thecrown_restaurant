@@ -8,6 +8,7 @@
     --colour-text-title-section:#9F1239;
     --colour-text-primary:#1C1917;
     --colour-text-secondary: #707780;
+    --colour-text-terciary: #B45309;
     --colour-text-link-hover:#B45309;
     --colour-text-btn-hover: #9F1239; 
     --colour-link-active:#B45309;
@@ -74,8 +75,25 @@ main{
     font-size: var(--font-size-section-title-primary);
 }
 
+
 .text-body-primary{
     font-size: var(--font-size-body-secondary)
+}
+
+.line-1{
+    width:10vw;
+    height: 2vh;
+    background-color: #B45309;
+}
+
+.line-2{
+    width:100%;
+    height: 1vh;
+    background-color: #707780;
+}
+
+.m-center{
+    margin:0 auto;
 }
 
 /* layout  */
@@ -84,6 +102,11 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /*spacing */
@@ -94,6 +117,9 @@ main{
 .mb-5{
     margin-bottom: 5vh;
 }
+/* .ml-3{
+    margin-left: 3vw;
+} */
 
 /* alignment */
 
@@ -101,7 +127,18 @@ main{
     text-align: center;
 }
 
+.text-left{
+    text-align: left;
+}
 
+
+.space-around{
+    justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
 
 
 .colour-white{
@@ -158,6 +195,9 @@ nav{
     text-decoration: underline;
 }
 
+.nav-item:hover{
+    color: var(--colour-text-link-hover);
+}
 
 
 .btn-nav{
