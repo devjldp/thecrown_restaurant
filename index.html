@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/home_styles.css">
     <title>Crown&Hound</title>
 </head>
 <body>
@@ -12,15 +13,15 @@
         <h1>The Crown & Hound</h1>
 
         <nav>
-            <ul id="navigation-elements">
-                <li class="active" >
-                    <a href="index.html" aria-label="Go to home page">Home</a>
+            <ul id="nav-items">
+                <li>
+                    <a href="index.html" class="nav-item active" aria-label="Go to home page" >Home</a>
                 </li>
                 <li>
-                    <a href="menu.html" aria-label="Go to menu page">Menu</a>
+                    <a href="menu.html" class="nav-item" aria-label="Go to menu page">Menu</a>
                 </li>
                 <li>
-                    <a href="recipe.html" aria-label="Go to recipes page">Recipes</a>
+                    <a href="recipe.html" class="nav-item" aria-label="Go to recipes page">Recipes</a>
                 </li>
                 <li>
                     <a href="book.html" aria-label="Go to book page" class="btn-nav">Book a table</a>
@@ -35,7 +36,7 @@
             <img src="assets/images/hero_home.jpeg" alt="Table with food">
 
             <!-- overlay with a message -->
-             <div class="text-center overlay">
+             <div class="text-center overlay" id="hero-overlay">
                 <h2>The Crown & Hound</h2>
                 <p>Classic British gastronomy, served with a modern touch in the heart of the countryside.</p>
                 <div>
@@ -44,9 +45,11 @@
              </div>
         </div>
 
-        <div class="text-center">
-            <h2 class="text-red">A tradition of Excellence</h2>
-            <p >Established in 1924, The Crown & Hound has been a sanctuary for those who appreciate fine, locally-sourced ingredients and time-honoured British recipes. Whether you're joining us for a Sunday Roast or a quiet evening pint, our doors are always open.</p>
+        <div class="flex-column-center mb-5">
+            <h2 class="text-title-section">A tradition of Excellence</h2>
+            <div class="w-70">
+                <p class="text-center text-body-primary">Established in 1924, The Crown & Hound has been a sanctuary for those who appreciate fine, locally-sourced ingredients and time-honoured British recipes. Whether you're joining us for a Sunday Roast or a quiet evening pint, our doors are always open.</p>
+            </div>
         </div>
     </main>
 
